@@ -39,12 +39,12 @@ class AppController extends Controller
     {
         parent::initialize();
     }
-//     public function beforeFilter(Event $event){
-//     	parent::beforeFilter($event);
-//     	if(!$this->request->session()->check( 'User' ) && $this->action != 'admin_login'){
-//     		$this->redirect('/admin/admin_login');
-//     	}
-//     }
+    public function beforeFilter(Event $event){
+    	parent::beforeFilter($event);
+    	if(!$this->request->session()->check( 'User' ) && $this->action == 'admin_login'){
+    		$this->redirect('/admin/admin_login');
+    	}
+    }
     
     
 }
