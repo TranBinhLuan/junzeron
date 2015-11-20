@@ -11,7 +11,7 @@ use App\Controller\AppController;
 class ApiController extends AppController
 {
 
-    	var $result_code = RESULT_CODE_ERROR;
+    var $result_code = RESULT_CODE_ERROR;
 	var $result_detail = array ();
 	var $result_error = ERROR_PARAMS;
 	var $dataJsonRequest = "";

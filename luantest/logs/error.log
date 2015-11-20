@@ -6971,3 +6971,132 @@ Stack Trace:
 #3 {main}
 
 
+2015-11-20 09:39:52 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2015-11-20 09:39:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2015-11-20 09:39:53 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::assets() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'assets',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /luantest/admin/assets/js/jquery.2.1.1.min.js
+Stack Trace:
+#0 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 /home/luan/github/luantest/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-11-20 09:39:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2015-11-20 09:39:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2015-11-20 09:39:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2015-11-20 09:39:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2015-11-20 09:39:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2015-11-20 09:39:53 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::assets() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'assets',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /luantest/admin/assets/avatars/avatar2.png
+Stack Trace:
+#0 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 /home/luan/github/luantest/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-11-20 09:39:53 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::assets() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'assets',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /luantest/admin/assets/avatars/avatar.png
+Stack Trace:
+#0 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 /home/luan/github/luantest/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-11-20 09:39:53 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::assets() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'assets',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /luantest/admin/assets/avatars/avatar4.png
+Stack Trace:
+#0 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 /home/luan/github/luantest/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-11-20 09:39:53 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::assets() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'assets',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /luantest/admin/assets/avatars/avatar3.png
+Stack Trace:
+#0 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 /home/luan/github/luantest/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-11-20 09:39:53 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::assets() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'assets',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /luantest/admin/assets/avatars/avatar5.png
+Stack Trace:
+#0 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 /home/luan/github/luantest/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-11-20 09:39:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2015-11-20 09:39:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2015-11-20 09:39:53 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::assets() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'assets',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /luantest/admin/assets/avatars/avatar.png
+Stack Trace:
+#0 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 /home/luan/github/luantest/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-11-20 09:39:53 Error: [Cake\Controller\Exception\MissingActionException] Action AdminController::assets() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'AdminController',
+  'action' => 'assets',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /luantest/admin/assets/avatars/avatar2.png
+Stack Trace:
+#0 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /home/luan/github/luantest/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdminController))
+#2 /home/luan/github/luantest/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
