@@ -38,6 +38,9 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
+//         $this->loadHelper('Html');
+//         $this->loadHelper('Form');
+//         $this->loadHelper('Flash');
     }
     public function beforeFilter(Event $event){
     	parent::beforeFilter($event);

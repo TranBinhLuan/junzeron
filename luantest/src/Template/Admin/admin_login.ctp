@@ -149,37 +149,36 @@
 
 						<div class="space-6"></div>
 						<p> Enter your details to begin: </p>
-
-						<form>
+						<?php echo $this->Form->create('Users', array('id' => 'contentformregister', 'action' => '/admin/admin_register/', 'url' => '/admin/admin_register/'));?>
 							<fieldset>
 								<label class="block clearfix">
 									<span class="block input-icon input-icon-right">
-										<input type="email" class="form-control" placeholder="Email" />
+										<input name="data[Users][email]"  type="email" class="form-control" placeholder="Email" />
 										<i class="ace-icon fa fa-envelope"></i>
 									</span>
 								</label>
 
 								<label class="block clearfix">
 									<span class="block input-icon input-icon-right">
-										<input type="text" class="form-control" placeholder="Username" />
+										<input name="data[Users][username]"  type="text" class="form-control" placeholder="Username" />
 										<i class="ace-icon fa fa-user"></i>
 									</span>
 								</label>
 
 								<label class="block clearfix">
 									<span class="block input-icon input-icon-right">
-										<input type="password" class="form-control" placeholder="Password" />
+										<input name="data[Users][password]" id="password" type="password" class="form-control" placeholder="Password" />
 										<i class="ace-icon fa fa-lock"></i>
 									</span>
 								</label>
 
 								<label class="block clearfix">
 									<span class="block input-icon input-icon-right">
-										<input type="password" class="form-control" placeholder="Repeat password" />
+										<input name="data[Users][password_repeat]"  type="password" class="form-control" placeholder="Repeat password" />
 										<i class="ace-icon fa fa-retweet"></i>
 									</span>
 								</label>
-
+								
 								<label class="block">
 									<input type="checkbox" class="ace" />
 									<span class="lbl">
@@ -196,14 +195,14 @@
 										<span class="bigger-110">Reset</span>
 									</button>
 
-									<button type="button" class="width-65 pull-right btn btn-sm btn-success">
+									<button type="submit" class="width-65 pull-right btn btn-sm btn-success">
 										<span class="bigger-110">Register</span>
 
 										<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
 									</button>
 								</div>
 							</fieldset>
-						</form>
+						<?php echo $this->Form->end(); ?>
 					</div>
 
 					<div class="toolbar center">
@@ -240,7 +239,7 @@
 		e.preventDefault();
 	 });
 	
-	 
 	});
+
 </script>
 		

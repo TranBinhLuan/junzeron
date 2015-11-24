@@ -40,14 +40,6 @@ class UsersTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->add('id', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('id', 'create');
-            
-        $validator
-            ->requirePresence('username', 'create')
-            ->notEmpty('username');
-            
-        $validator
             ->add('email', 'valid', ['rule' => 'email'])
             ->requirePresence('email', 'create')
             ->notEmpty('email');
@@ -55,14 +47,7 @@ class UsersTable extends Table
         $validator
             ->requirePresence('password', 'create')
             ->notEmpty('password');
-            
-        $validator
-            ->requirePresence('password_salt', 'create')
-            ->notEmpty('password_salt');
-            
-        $validator
-            ->requirePresence('created_at', 'create')
-            ->notEmpty('created_at');
+       
 
         return $validator;
     }

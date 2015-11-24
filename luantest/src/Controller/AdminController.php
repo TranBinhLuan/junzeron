@@ -1,10 +1,11 @@
 <?php
 namespace App\Controller;
-
+//namespace Cake\View\Helper;
 use App\Controller\AppController;
 use Cake\Core\Configure;
 use Cake\Core\Configure\Engine\PhpConfig;
 use Cake\Network\Session\DatabaseSession;
+use Cake\View\Helper;
 /**
  * Users Controller
  *
@@ -18,6 +19,7 @@ class AdminController extends AppController
 	public function admin_login(){
 		$this->layout = 'admin_login';
 		if ($this->request->is('post')) {
+			$session = $this->request->session();
 			$data = $this->request->data['data'];
 			$passwordReal = md5($data['User']['password']);
 			$passwordSalt = md5(PASSWORD_SALT);
@@ -29,9 +31,8 @@ class AdminController extends AppController
 			->where(['email' => $data['User']['email'],'password'=>$password])
 			->first();
 			if(empty($users)){
-				
 			}else{
-				$this->request->session()->write('User', $users);
+				$session->write('User', $users);
 				$this->redirect ( '/admin/admin_home' );
 			}
 		}
@@ -46,7 +47,24 @@ class AdminController extends AppController
 		//$this->User->find('all');
 	}
 	public function admin_register(){
-		
+		$this->loadModel('Users');
+		$session = $this->request->session();
+		$data = $this->request->data['data'];
+		$users = $this->Users->find('all')
+		->where(['email' => $data['Users']['email']])
+		->first();
+		//print_r($users);exit;
+		$user = $this->Users->newEntity();
+		if(empty($users)){
+			
+			if ($this->Users->save($user)) {
+				$this->redirect ( '/admin/admin_home' );
+			} else {
+				$this->redirect ( '/admin/admin_login' );
+			}
+		}else{
+			
+		}
 	}
     /**
      * Index method

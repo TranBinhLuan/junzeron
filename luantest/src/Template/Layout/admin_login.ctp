@@ -51,6 +51,7 @@
 	</style>
 	</head>
 	<body class="login-layout light-login">
+	<?= $this->Flash->render() ?>
 		<div class="main-container">
 					<?= $this->fetch('content') ?>
 		</div><!-- /.main-container -->

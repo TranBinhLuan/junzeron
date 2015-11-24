@@ -894,7 +894,7 @@
 					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
 				</script>
 			</div>
-
+			<?= $this->Flash->render() ?>
 			<div class="main-content">
 				<?= $this->fetch('content') ?>
 			</div><!-- /.main-content -->
