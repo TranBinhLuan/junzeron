@@ -1,0 +1,2 @@
+2015-12-15 02:32:32 Debug: command 'bake' in plugin 'Bake' was not aliased, conflicts with 'Bake'
+2015-12-15 02:32:32 Debug: command 'migrations' in plugin 'Migrations' was not aliased, conflicts with 'Migrations'

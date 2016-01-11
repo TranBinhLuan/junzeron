@@ -1,3 +1,5 @@
+ <?php echo __('Hey, bonjour'); ?>
+    <?php echo __('Je teste la traduction'); ?>
 <div class="actions columns large-2 medium-3">
     <h3><?= __('Actions') ?></h3>
     <ul class="side-nav">

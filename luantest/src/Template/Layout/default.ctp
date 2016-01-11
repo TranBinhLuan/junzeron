@@ -44,7 +44,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
     </header>
     <div id="container">
+		
 
+<?php echo $this->Html->link("eng",array('language'=>'eng'));?> | 
+<?php echo $this->Html->link("jpn",array('language'=>'jp'));?>
         <div id="content">
             <?= $this->Flash->render() ?>
 

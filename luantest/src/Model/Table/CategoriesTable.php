@@ -23,6 +23,7 @@ class CategoriesTable extends Table
      */
     public function initialize(array $config)
     {
+    	$this->addBehavior('Translate', ['fields' => ['name'],'translationTable' => 'I18n']);
         $this->table('categories');
         $this->displayField('name');
         $this->primaryKey('id');

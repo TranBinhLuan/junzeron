@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\Core\Configure;
 /**
  * Categories Controller
  *
@@ -10,7 +10,6 @@ use App\Controller\AppController;
  */
 class CategoriesController extends AppController
 {
-
     /**
      * Index method
      *
@@ -18,6 +17,10 @@ class CategoriesController extends AppController
      */
     public function index()
     {
+    	//$language = Configure::read('Config.language');
+//     	$language = $this->request->session()->read('Config.language');
+//     	echo $language;
+//     	I18n::locale($language);
         $this->set('categories', $this->paginate($this->Categories));
         $this->set('_serialize', ['categories']);
     }
@@ -29,8 +32,11 @@ class CategoriesController extends AppController
      * @return void
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function view($id = null)
+    public function view($id)
     {
+//     	$language = $this->request->session()->read('Config.language');
+//     	echo $language;
+//     	I18n::locale($language);
         $category = $this->Categories->get($id, [
             'contain' => ['Items']
         ]);

@@ -45,6 +45,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <h1>Get the Ovens Ready</h1>
         </div>
     </header>
+    <?php echo __('search.results'); ?>
     <div id="content">
         <?php Debugger::checkSecurityKeys(); ?>
         <p id="url-rewriting-warning" style="background-color:#e32; color:#fff;display:none">

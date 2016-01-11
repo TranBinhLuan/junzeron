@@ -68,7 +68,6 @@ try {
 } catch (\Exception $e) {
     die($e->getMessage() . "\n");
 }
-
 // Load an environment local configuration file.
 // You can use a file like app_local.php to provide local overrides to your
 // shared configuration.
@@ -81,7 +80,6 @@ if (!Configure::read('debug')) {
     Configure::write('Cache._cake_model_.duration', '+1 years');
     Configure::write('Cache._cake_core_.duration', '+1 years');
 }
-
 /**
  * Set server timezone to UTC. You can change it to another timezone of your
  * choice but using UTC makes time calculations / conversions easier.
@@ -98,7 +96,7 @@ mb_internal_encoding(Configure::read('App.encoding'));
  * formatted and sets the default language to use for translations.
  */
 ini_set('intl.default_locale', 'en_US');
-
+Configure::write('Config.language', 'eng');
 /**
  * Register application error and exception handlers.
  */
@@ -159,6 +157,8 @@ Request::addDetector('tablet', function ($request) {
     return $detector->isTablet();
 });
 
+
+
 /**
  * Custom Inflector rules, can be set to correctly pluralize or singularize
  * table, model, controller names or whatever other string is passed to the
@@ -194,9 +194,16 @@ if (Configure::read('debug')) {
 DispatcherFactory::add('Asset');
 DispatcherFactory::add('Routing');
 DispatcherFactory::add('ControllerFactory');
-
 /**
  * Enable default locale format parsing.
  * This is needed for matching the auto-localized string output of Time() class when parsing dates.
  */
 Type::build('datetime')->useLocaleParser();
+
+Plugin::loadAll([
+    'Block' => ['bootstrap' => true ,'routes' => false],
+    'CMS' => ['bootstrap' => true],
+    'Menu' => ['bootstrap' => true, 'routes' => false],
+]);
+
+

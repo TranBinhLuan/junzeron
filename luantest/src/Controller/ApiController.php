@@ -2,8 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use Cake\ORM\TableRegistry;
-use Cake\ORM\Table;
+use Cake\Event\Event;
 /**
  * Api Controller
  *
@@ -16,7 +15,7 @@ class ApiController extends AppController
 	var $result_error = PARAMS_ERROR;
 	var $checkValidaterequest = false;
 	var $dataJsonRequest = "";
-	var $layout = 'test';
+	var $layout = false;
 	
 	public $components = array('Test');
 	
@@ -25,8 +24,8 @@ class ApiController extends AppController
 	 * Overwrite beforeRender
 	 * Return response is json type
 	 */
-	public function beforeRender() {
-		parent::beforeRender ();
+	public function beforeRender(Event $event) {
+		parent::beforeRender ($event);
 		$this->response->type ( 'json' );
 		// Add hock if check validdate error
 		if (! $this->checkValidRequest) {
@@ -46,8 +45,8 @@ class ApiController extends AppController
 	 * @see Controller::beforeFilter() @overwrite
 	 *      always render layout and set default value
 	 */
-	public function beforeFilter() {
-		parent::beforeFilter ();
+	public function beforeFilter(Event $event) {
+		parent::beforeFilter ($event);
 		// First always check validate request params from client
 		$this->checkValidateRequestParams ();
 		$this->set ( array (
@@ -64,8 +63,8 @@ class ApiController extends AppController
 	 * @see Controller::afterFilter() @overwrite
 	 *      afterFilter run when action of controller is finished, afterFilter set again value and render again
 	 */
-	public function afterFilter() {
-		parent::afterFilter ();
+	public function afterFilter(Event $event) {
+		parent::afterFilter ($event);
 		$this->set ( array (
 				'result_code' => $this->result_code,
 				'result_detail' => $this->result_detail,
@@ -192,7 +191,7 @@ class ApiController extends AppController
 	 * Api register app 
 	 * @param params={"email":"luantran@gmail.com.vn","password":"12345678"}
 	 * @return json
-	 * @property $Member
+	 * @property $Users
 	 */
 	public function user_register_email(){
 		$strError = $this->validateRequireRequestParams ( array (
@@ -245,6 +244,26 @@ class ApiController extends AppController
 		}
 	}
 	
+	
+	public function list_items(){
+		$holidays = $this->Test->get_holidays_this_month('2015','10');
+		
+		$this->result_detail = array (
+				$holidays
+		);
+	}
+	public function add_item(){
+		
+	}
+	public function delete_item(){
+		
+	}
+	public function edit_item(){
+		
+	}
+	public function detail_item(){
+		
+	}
 	
 	
 	

@@ -17,6 +17,10 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 use Cake\Network\Session\DatabaseSession;
+use Cake\Controller\Component\AuthComponent;
+use Cake\Controller\Component;
+use Cake\Cache\Cache;
+use Cake\I18n\I18n;
 /**
  * Application Controller
  *
@@ -38,18 +42,30 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
-//         $this->loadHelper('Html');
-//         $this->loadHelper('Form');
-//         $this->loadHelper('Flash');
     }
     public function beforeFilter(Event $event){
     	parent::beforeFilter($event);
+    	$this->_setLanguage();
+    	$language = $this->request->session()->read('Config.language');
+    	I18n::locale($language);
     	if(!$this->request->session()->check( 'User' ) && $this->action == 'admin_login'){
     		$this->redirect('/admin/admin_login');
     	}
     }
-    
-    
+    function _setLanguage() {
+    	$session = $this->request->session();
+    	if (!$session->check('Config.language')) {
+    		$session->write('Config.language', 'eng');
+    	}else{
+    		if(empty($_GET['language'])){
+    			$langua = $session->read('Config.language');
+    			$session->write('Config.language', $langua);
+    		}else{
+	    		$langua = $_GET['language'];
+	    		$session->write('Config.language', $langua);
+    		}
+    	}
+    }
 }
 
 

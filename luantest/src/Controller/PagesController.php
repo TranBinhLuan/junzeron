@@ -13,7 +13,7 @@
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  */
 namespace App\Controller;
-
+use Cake\I18n\I18n;
 use Cake\Core\Configure;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
@@ -27,7 +27,9 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
-
+	public function initialize() {
+		I18n::locale('eng');
+	}
     /**
      * Displays a view
      *
@@ -35,6 +37,7 @@ class PagesController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
+	
     public function display()
     {
         $path = func_get_args();
